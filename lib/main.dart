@@ -1,63 +1,65 @@
+//计数器
+
 import 'package:flutter/material.dart';
-
-main()=>runApp(MyApp());
-
-class MyApp extends StatelessWidget{
-  const MyApp({Key? key}) : super(key: key);
+main()=>runApp(MYApp());
+class MYApp extends StatelessWidget {
+  const MYApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return  MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: Scaffold(
-            appBar: AppBar(
-              title: const Text("a title"),
-              backgroundColor: const Color.fromARGB(255, 255, 100, 100),
-            ),
-            body: const HomeContent()
-        )
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("hi"),
+        ),
+        body: WDHomeContent(),
+      ),
     );
   }
 }
-
-class HomeContent extends StatelessWidget{
-
-  const HomeContent({Key? key}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: AgreeMent()
-    );
-  }
-}
-class AgreeMent extends StatefulWidget {
-  const AgreeMent({Key? key}) : super(key: key);
+class WDHomeContent extends StatefulWidget {
+  const WDHomeContent({Key? key}) : super(key: key);
 
   @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    return  AgreeMentState();
-  }
+  State<WDHomeContent> createState() => _WDHomeContentState();
 }
 
-class AgreeMentState extends State<AgreeMent>{
-  var flag = false;
+class _WDHomeContentState extends State<WDHomeContent> {
+  var count = 0;
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Checkbox(value: flag, onChanged: (value){
-          setState(() {
-            flag = value!;
-          });
-        }),
-        const Text("同意?")
+        Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: getButtons()
+        ),
+        Text("count is $count",style: TextStyle(fontSize: 20),),
       ],
     );
   }
 
+  List<Widget> getButtons(){
+    return  [
+      ElevatedButton(onPressed: (){
+        print("++++");
+        setState(() {
+          count++;
+        });
+      }, child: Text("+")
+      ),
+      SizedBox(width: 20),
+      ElevatedButton(onPressed: (){
+        print("---");
+        setState(() {
+          count--;
+        });
+      }, child: Text("-")
+      ),
+    ];
+  }
 }
+
 
 
