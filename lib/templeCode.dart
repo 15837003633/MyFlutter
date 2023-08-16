@@ -16,7 +16,7 @@ class MyAppWidget extends StatelessWidget{
     return MaterialApp(
       home: Scaffold(
         appBar:AppBar(
-          title: Text("hello"),
+          title: Text("hello~~11"),
         ),
         body: HomeWidget(),
       ),
@@ -50,8 +50,15 @@ class CountButtonWidget extends StatefulWidget{
 class CountButtonState extends State<CountButtonWidget>{
   int count = 0;
   @override
+  void initState() {
+    // TODO: implement initState
+    print("initState");
+    super.initState();
+  }
+  @override
   Widget build(BuildContext context) {
     // TODO: implement build
+    print("built");
     return OutlinedButton(onPressed: (){
       print("on click");
       setState(() {
