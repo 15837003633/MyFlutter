@@ -91,3 +91,4 @@ flutter:
   assets:
     - resource/image/kkicon.png
     - resource/image/app_icon@2x.png
+    - resource/yz.json
