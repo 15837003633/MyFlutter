@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'learn07_异步.dart';
+import '../learn07_异步.dart';
 
 main()=>runApp(Myapp());
 
