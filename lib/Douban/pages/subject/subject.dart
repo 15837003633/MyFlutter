@@ -4,10 +4,10 @@ class SubjectPages extends StatefulWidget {
   const SubjectPages({Key? key}) : super(key: key);
 
   @override
-  State<SubjectPages> createState() => _homePagesState();
+  State<SubjectPages> createState() => _subjectPagesState();
 }
 
-class _homePagesState extends State<SubjectPages> {
+class _subjectPagesState extends State<SubjectPages> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
