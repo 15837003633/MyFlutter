@@ -89,6 +89,6 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
 
   assets:
-    - resource/image/kkicon.png
-    - resource/image/app_icon@2x.png
+    - resource/image/
+    - resource/tabbar/
     - resource/yz.json
