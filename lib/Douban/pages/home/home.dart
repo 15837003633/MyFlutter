@@ -1,12 +1,22 @@
 import 'package:flutter/material.dart';
 
-class HomePages extends StatefulWidget {
-  const HomePages({Key? key}) : super(key: key);
+import '../../service/home_request.dart';
+
+class WDHomePage extends StatefulWidget {
+  const WDHomePage({Key? key}) : super(key: key);
   @override
-  State<HomePages> createState() => _homePagesState();
+  State<WDHomePage> createState() => _homePagesState();
 }
 
-class _homePagesState extends State<HomePages> {
+class _homePagesState extends State<WDHomePage> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    HomeRequest.requestMoviesList().then((value){
+      print("requestMoviesList $value");
+    });
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

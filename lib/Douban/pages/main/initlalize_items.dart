@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:hello_flutter/Douban/pages/group/group.dart';
+import 'package:hello_flutter/Douban/pages/mall/mall.dart';
+import 'package:hello_flutter/Douban/pages/profile/profile.dart';
 
 import 'bottom_tabbar_item.dart';
 import '../subject/subject.dart';
@@ -12,9 +15,9 @@ List<WDBottomTabBarItem> items = [
 ];
 
 List<Widget> pages = [
-  HomePages(),
-  SubjectPages(),
-  HomePages(),
-  HomePages(),
-  HomePages(),
+  WDHomePage(),
+  WDSubjectPage(),
+  WDGroupPage(),
+  WDMallPage(),
+  WDProfilePage(),
 ];
