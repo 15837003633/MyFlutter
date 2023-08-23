@@ -19,7 +19,7 @@ int _rankNum = 1;
 
 class MovieItem {
   late int rank;
-  String? imageURL;
+  late String imageURL;
   String? title;
   String? playDate;
   double? rating;
@@ -30,7 +30,7 @@ class MovieItem {
 
   MovieItem.fromMap(Map<String, dynamic> json) {
     rank = _rankNum++;
-    imageURL = json["images"]["medium"];
+    imageURL = json["images"]["medium"] ?? "";
     title = json["title"];
     playDate = json["year"];
     rating = json["rating"]["average"];
