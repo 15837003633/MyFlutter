@@ -21,3 +21,23 @@ class MyHomeWidget extends StatelessWidget {
     return Text("hello world");
   }
 }
+
+class WUCountWidget extends InheritedWidget {
+  const WUCountWidget({
+    Key? key,
+    required Widget child,
+  }) : super(key: key, child: child);
+
+  static WUCountWidget of(BuildContext context) {
+    final WUCountWidget? result = context.dependOnInheritedWidgetOfExactType<WUCountWidget>();
+    assert(result != null, 'No WUCountWidget found in context');
+    return result!;
+  }
+
+  @override
+  bool updateShouldNotify(WUCountWidget old) {
+    return ;
+  }
+}
+
+

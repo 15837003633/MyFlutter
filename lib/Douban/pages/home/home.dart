@@ -28,4 +28,3 @@ class _homePagesState extends State<WDHomePage> {
     );
   }
 }
-

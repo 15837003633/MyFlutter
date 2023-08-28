@@ -39,7 +39,7 @@ class _MyHomeWidgetState extends State<MyHomeWidget> {
         itemCount: 20,
         itemExtent: 60,
         itemBuilder: (context, index){
-          return Container( //最外层的Container的大小被cell约束着
+          return Container( //最外层的Container设置alignment会根据父视图填充
             alignment: Alignment.center,
             color: Colors.green,
               child: Container(//里面的Container的大小根据子视图的内容填充
